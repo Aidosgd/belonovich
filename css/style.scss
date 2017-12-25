@@ -1,0 +1,302 @@
+*{
+  &:focus{
+    outline: none;
+  }
+}
+
+body, html{
+  height: 100%;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  // background: white;
+  .navbar{
+    .scroll{
+      display: none;
+    }
+    .social{
+      display: block;
+    }
+    &.active{
+      .scroll{
+        display: block;
+      }
+      .social{
+        display: none;
+      }
+      .container{
+        border-bottom: 1px solid #9c9c9c;
+      }
+      .navbar-brand{
+        &:before{
+          right: -2230px;
+          bottom: -54px;
+          top: -1px;
+          left: -1049px;
+        }
+      }
+    }
+  }
+  .navbar-brand{
+    padding: 28px 15px;
+    position: relative;
+    &:before{
+      content: '';
+      transition: 0.4s;
+      position: absolute;
+      right: 20px;
+      bottom: -28px;
+      top: 28px;
+      left: 71px;
+      background: black;
+      z-index: 10;
+    }
+    img{
+      position: relative;
+      z-index: 20;
+    }
+  }
+  .navbar-nav{
+    position: relative;
+    z-index: 20;
+    li{
+      a{
+        background: transparent;
+        color: #858585;
+        padding: 45px 15px;
+        &:hover, &:focus, &.active{
+          background: transparent;
+          color: #858585;
+        }
+      }
+    }
+  }
+}
+
+.bottom{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  .btn{
+    position: relative;
+    color: black;
+    padding: 6px 46px;
+    div{
+      padding: 10px;
+    }
+    &:first-child{
+      &:before{
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 1px;
+        height: 50px;
+        background-color: #000000;
+      }
+    }
+  }
+}
+
+.main-content{
+  height: 100%;
+  section{
+    height: 100%;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // right: 0;
+    // bottom: 0;
+  }
+  .first{
+    .content{
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      transform: translateY(-50%);
+      .name{
+        font-size: 72px;
+        font-weight: 900;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 0.94;
+        letter-spacing: -0.3px;
+        color: #000000;
+        margin-bottom: 18px;
+      }
+      .position{
+        font-size: 28px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: -0.1px;
+        color: #000000;
+        margin-bottom: 28px;
+      }
+      .desc{
+        font-size: 16px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.5;
+        letter-spacing: -0.1px;
+        color: #000000;
+        max-width: 460px;
+      }
+    }
+  }
+  .portfolio{
+    height: initial;
+    .list{
+      .item{
+        min-height: 318px;
+        border-top: 1px solid #a4a4a4;
+        padding-top: 60px;
+        padding-bottom: 35px;
+        .col-md-1{
+          padding-top: 70px;
+        }
+        h1{
+          font-size: 42px;
+          font-weight: bold;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: normal;
+          letter-spacing: -0.2px;
+          color: #000000;
+          margin-top: 0;
+        }
+        .min{
+          font-size: 12px;
+          font-weight: 600;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.58;
+          letter-spacing: -0px;
+          color: #000000;
+        }
+        .desc{
+          font-size: 12px;
+          font-weight: 600;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.58;
+          letter-spacing: -0px;
+          color: #a4a4a4;
+        }
+        p{
+          font-size: 16px;
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.5;
+          letter-spacing: -0.1px;
+          color: #000000;
+        }
+        .btn-link{
+          margin-top: 70px;
+          padding: 0;
+          color: black;
+          font-size: 14px;
+          font-weight: 600;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.36;
+          letter-spacing: -0.1px;
+          color: #000000;
+          img{
+            transform: rotate(-123deg);
+            width: 4px;
+            left: 11px;
+            top: -3px;
+            position: relative;
+          }
+        }
+        .btn{
+          transition: 0.4s;
+          box-shadow: none;
+          &.active{
+            transform: rotate(-180deg)
+          }
+        }
+        .hidden-block{
+          display: none;
+        }
+      }
+    }
+  }
+  .footer{
+    background-color: #000000;
+    position: relative;
+    .content{
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      transform: translateY(-50%);
+      .name{
+        font-size: 72px;
+        font-weight: 900;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 0.94;
+        letter-spacing: -0.3px;
+        color: #fff;
+        margin-bottom: 18px;
+      }
+      .position{
+        font-size: 28px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: -0.1px;
+        color: #fff;
+      }
+      .desc{
+        font-size: 16px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.5;
+        letter-spacing: -0.1px;
+        color: #fff;
+        max-width: 460px;
+      }
+      p{
+        font-size: 16px;
+        span{
+          color: #8a8a8a;
+        }
+        a{
+          color: #fff;
+          position: relative;
+          padding: 0 5px;
+          &:last-child{
+            &:before{
+              content: none;
+            }
+          }
+          &:before{
+            content: '';
+            position: absolute;
+            right: -3px;
+            top: 5px;
+            width: 1px;
+            height: 9px;
+            background-color: #9c9c9c;
+          }
+        }
+      }
+    }
+  }
+}
