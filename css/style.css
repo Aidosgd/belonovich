@@ -230,4 +230,14 @@ header {
             height: 9px;
             background-color: #9c9c9c; }
 
+@media (max-width: 768px) {
+  .main-content .first .content .name {
+    font-size: 32px; }
+
+  .main-content .first .content .position {
+    font-size: 18px; }
+
+  .main-content .first .content .desc {
+    font-size: 14px; } }
+
 /*# sourceMappingURL=style.css.map */
