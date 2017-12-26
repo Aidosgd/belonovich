@@ -10,6 +10,7 @@
 
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
   <!-- Latest compiled and minified JavaScript -->
   <script
@@ -18,12 +19,13 @@
   crossorigin="anonymous"></script>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.compatibility.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <header>
+  <header class="wow fadeInUp">
     <nav class="navbar">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -72,7 +74,7 @@
   </div>
 
   <div class="main-content">
-    <section class="first active">
+    <section class="first active wow fadeInLeft">
       <div class="content container">
         <div class="name">
           Belonovich <br> Gayane
@@ -88,7 +90,7 @@
     <section class="portfolio">
       <div class="container">
         <div class="list">
-          <div class="item">
+          <div class="item wow fadeInUp">
             <div class="row">
               <div class="col-md-3 col-xs-10">
                 <h1>Chocolife 1</h1>
@@ -113,7 +115,7 @@
               </div>
             </div>
           </div>
-          <div class="item">
+          <div class="item wow fadeInUp">
             <div class="row">
               <div class="col-md-3">
                 <h1>Chocolife 2</h1>
@@ -138,7 +140,7 @@
               </div>
             </div>
           </div>
-          <div class="item">
+          <div class="item wow fadeInUp">
             <div class="row">
               <div class="col-md-3">
                 <h1>Chocolife 3</h1>
@@ -163,7 +165,7 @@
               </div>
             </div>
           </div>
-          <div class="item">
+          <div class="item wow fadeInUp">
             <div class="row">
               <div class="col-md-3">
                 <h1>Chocolife 4</h1>
@@ -188,7 +190,7 @@
               </div>
             </div>
           </div>
-          <div class="item">
+          <div class="item wow fadeInUp">
             <div class="row">
               <div class="col-md-3">
                 <h1>Chocolife 5</h1>
@@ -213,7 +215,7 @@
               </div>
             </div>
           </div>
-          <div class="item">
+          <div class="item wow fadeInUp">
             <div class="row">
               <div class="col-md-3">
                 <h1>Chocolife 6</h1>
@@ -262,6 +264,11 @@
   </div>
 
 <script>
+    $(document).ready(function() {
+      $("html,body").animate({scrollTop: 0}, 100); //100ms for example
+    });
+    new WOW().init();
+
     $('.navbar-brand').on('click', function(){
         $('section').removeClass('active');
         $('.first').addClass('active');
@@ -286,6 +293,8 @@
               }
           });
         $('.navbar').addClass('active');
+        $('.scroll li').removeClass('active');
+        $('.myWorks').closest('li').addClass('active');
     });
 
     $('.contactMe').on('click', function(){
@@ -299,6 +308,8 @@
               }
           });
         $('.navbar').addClass('active');
+        $('.scroll li').removeClass('active');
+        $('.contactMe').closest('li').addClass('active');
     });
 
     $(window).bind('mousewheel', function(event) {
@@ -306,6 +317,12 @@
       if (event.originalEvent.wheelDelta >= 0) {
         if(activeSection.prev().hasClass('first')){
           $('.navbar').removeClass('active');
+        }
+        $('.scroll li').removeClass('active');
+        if(activeSection.prev().hasClass('portfolio')){
+          $('.myWorks').closest('li').addClass('active');
+        }else{
+          $('.contactMe').closest('li').addClass('active');
         }
         if(activeSection.prev().length && activeSection.prev().offset().top + activeSection.prev().height() < $(window).scrollTop() + $(window).height()){
           activeSection.prev().addClass('active');
@@ -322,6 +339,12 @@
       else {
         if(activeSection.next().length && activeSection.next().offset().top <= $(window).scrollTop() + $(window).height()){
           activeSection.next().addClass('active');
+          $('.scroll li').removeClass('active');
+          if(activeSection.next().hasClass('portfolio')){
+            $('.myWorks').closest('li').addClass('active');
+          }else{
+            $('.contactMe').closest('li').addClass('active');
+          }
           activeSection.removeClass('active');
           $("html, body").stop().animate({ scrollTop: activeSection.next().offset().top - 110 }, {
               duration: 'slow', // how slow we are animating
