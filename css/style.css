@@ -13,17 +13,18 @@ header {
   header .navbar .scroll {
     display: none; }
     header .navbar .scroll li.active a {
+      color: white !important;
       position: relative; }
       header .navbar .scroll li.active a:before {
         content: '';
         position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 35px;
-        height: 1px;
+        left: 15px;
+        right: 15px;
+        bottom: -1px;
+        height: 3px;
         background: white; }
     header .navbar .scroll li a {
-      color: white !important; }
+      color: rgba(255, 255, 255, 0.25) !important; }
   header .navbar .social {
     display: block; }
     header .navbar .social li a {
@@ -50,13 +51,18 @@ header {
     bottom: -55px;
     top: -1px;
     left: -1049px; }
+  header .navbar.black .navbar-brand:before {
+    right: -2230px;
+    bottom: -1255px;
+    top: -1px;
+    left: -1049px; }
   header .navbar-brand {
     padding: 28px 15px;
     position: relative;
     cursor: pointer; }
     header .navbar-brand:before {
       content: '';
-      transition: 0.4s;
+      transition: 1.4s;
       position: absolute;
       right: 20px;
       bottom: -28px;
@@ -217,8 +223,8 @@ header {
       .main-content .portfolio .list .item .hidden-block {
         display: none; }
   .main-content .footer {
-    background-color: #000000;
-    position: relative; }
+    position: relative;
+    z-index: 10000; }
     .main-content .footer .content {
       position: absolute;
       top: 50%;

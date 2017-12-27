@@ -25,7 +25,7 @@
 </head>
 <body>
 
-  <header class="wow fadeInUp">
+  <header class="wow fadeInDown" data-wow-duration="2s">
     <nav class="navbar">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -74,7 +74,7 @@
   </div>
 
   <div class="main-content">
-    <section class="first active wow fadeInLeft">
+    <section class="first active wow fadeIn" data-wow-duration="2s">
       <div class="content container">
         <div class="name">
           Belonovich <br> Gayane
@@ -245,7 +245,7 @@
     </section>
 
     <section class="footer">
-      <div class="content container">
+      <div class="content container wow fadeInUp" data-wow-duration="2s" data-wow-deley="2s">
         <div class="name">
           Why are you still here?
         </div>
@@ -280,6 +280,7 @@
               }
           });
         $('.navbar').removeClass('active');
+        $('.navbar').removeClass('black');
     });
 
     $('.myWorks').on('click', function(){
@@ -293,6 +294,7 @@
               }
           });
         $('.navbar').addClass('active');
+        $('.navbar').removeClass('black');
         $('.scroll li').removeClass('active');
         $('.myWorks').closest('li').addClass('active');
     });
@@ -308,6 +310,7 @@
               }
           });
         $('.navbar').addClass('active');
+        $('.navbar').addClass('black');
         $('.scroll li').removeClass('active');
         $('.contactMe').closest('li').addClass('active');
     });
@@ -315,25 +318,52 @@
     $(window).bind('mousewheel', function(event) {
       var activeSection = $('section.active');
       if (event.originalEvent.wheelDelta >= 0) {
-        if(activeSection.prev().hasClass('first')){
-          $('.navbar').removeClass('active');
-        }
         $('.scroll li').removeClass('active');
-        if(activeSection.prev().hasClass('portfolio')){
+
+        if(activeSection.prev().hasClass('portfolio') && activeSection.prev().hasClass('first')){
           $('.myWorks').closest('li').addClass('active');
         }else{
           $('.contactMe').closest('li').addClass('active');
         }
-        if(activeSection.prev().length && activeSection.prev().offset().top + activeSection.prev().height() < $(window).scrollTop() + $(window).height()){
-          activeSection.prev().addClass('active');
-          activeSection.removeClass('active');
-          $("html, body").stop().animate({ scrollTop: activeSection.prev().offset().top - 110 }, {
-              duration: 'slow', // how slow we are animating
-              easing: 'easeInOutSine', // the type of easing
-              complete: function() { // the callback
 
-              }
-          });
+        if(activeSection.prev().length){
+          if(activeSection.prev().hasClass('portfolio')){
+            activeSection.prev().addClass('active');
+            activeSection.removeClass('active');
+            $("html, body").stop().animate({ scrollTop: activeSection.prev().offset().top + $(window).height() -  110 }, {
+                duration: 'slow', // how slow we are animating
+                easing: 'easeInOutSine', // the type of easing
+                complete: function() { // the callback
+
+                }
+            });
+          }else if(activeSection.prev().hasClass('first')){
+            if($('.portfolio').offset().top - $(window).scrollTop() > 0){
+              activeSection.prev().addClass('active');
+              activeSection.removeClass('active');
+              $("html, body").stop().animate({ scrollTop: $('.first').offset().top - 110}, {
+                    duration: 'slow', // how slow we are animating
+                    easing: 'easeInOutSine', // the type of easing
+                    complete: function() { // the callback
+
+                    }
+                });
+              $('.navbar').removeClass('active');
+              $('.navbar').removeClass('black');
+            }
+          }else{
+            $("html, body").stop().animate({ scrollTop: activeSection.prev().offset().top - 110 }, {
+                duration: 'slow', // how slow we are animating
+                easing: 'easeInOutSine', // the type of easing
+                complete: function() { // the callback
+
+                }
+            });
+          }
+
+          if(!activeSection.prev().hasClass('footer')){
+            $('.navbar').removeClass('black');
+          }
         }
       }
       else {
@@ -353,6 +383,9 @@
 
               }
           });
+          if( activeSection.next().hasClass('footer')){
+            $('.navbar').addClass('black');
+          }
           $('.navbar').addClass('active');
         }
       }
