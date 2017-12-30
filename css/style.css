@@ -284,6 +284,53 @@ header {
     font-size: 18px; }
 
   .main-content .first .content .desc {
-    font-size: 14px; } }
+    font-size: 14px; }
+
+  .main-content .footer .content .name {
+    font-size: 32px; }
+
+  .bottom .btn {
+    padding: 6px 6px; }
+    .bottom .btn div {
+      padding: 5px; }
+
+  .navbar-collapse {
+    display: block; }
+
+  header .navbar .scroll {
+    display: block; }
+
+  header .navbar .social {
+    display: none; }
+
+  header .navbar .navbar-header .navbar-brand {
+    padding: 15px; }
+    header .navbar .navbar-header .navbar-brand:before {
+      right: 15px;
+      top: 15px;
+      left: 15px;
+      bottom: 15px; }
+  header .navbar .navbar-header .visible-xs-block {
+    width: 70%;
+    margin: 0;
+    padding: 20px 15px;
+    text-align: right; }
+    header .navbar .navbar-header .visible-xs-block li {
+      display: inline-block; }
+      header .navbar .navbar-header .visible-xs-block li a {
+        padding: 10px 5px;
+        color: black !important; }
+  header .navbar.active .navbar-header .navbar-brand:before {
+    right: -2230px !important;
+    bottom: -55px !important;
+    top: -1px !important;
+    left: -1049px !important; }
+  header .navbar.active .navbar-header .visible-xs-block li a {
+    color: white !important; }
+  header .navbar.black .navbar-header .navbar-brand:before {
+    right: -2230px !important;
+    bottom: -1255px !important;
+    top: -1px !important;
+    left: -1049px !important; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -382,4 +382,81 @@ header{
   .main-content .first .content .desc{
     font-size: 14px;
   }
+  .main-content .footer .content .name{
+    font-size: 32px;
+  }
+  .bottom .btn{
+    padding: 6px 6px;
+    div{
+      padding: 5px;
+    }
+  }
+  .navbar-collapse{
+    display: block;
+  }
+  header .navbar .scroll{
+    display: block;
+  }
+  header .navbar .social{
+    display: none;
+  }
+  header{
+    .navbar{
+      .navbar-header{
+        .navbar-brand{
+          padding: 15px;
+          &:before{
+            right: 15px;
+            top: 15px;
+            left: 15px;
+            bottom: 15px;
+          }
+        }
+        .visible-xs-block{
+          width: 70%;
+          margin: 0;
+          padding: 20px 15px;
+          text-align: right;
+          li{
+            display: inline-block;
+            a{
+              padding: 10px 5px;
+              color: black !important;
+            }
+          }
+        }
+      }
+      &.active{
+        .navbar-header{
+          .navbar-brand{
+            &:before{
+              right: -2230px !important;
+              bottom: -55px !important;
+              top: -1px !important;
+              left: -1049px !important;
+            }
+          }
+          .visible-xs-block{
+            li{
+              a{
+                color: white !important;
+              }
+            }
+          }
+        }
+      }
+      &.black{
+        .navbar-header{
+          .navbar-brand{
+            &:before{
+              right: -2230px !important;
+              bottom: -1255px !important;
+              top: -1px !important;
+              left: -1049px !important;
+            }
+          }
+        }
+      }
+    }
+  }
 }
