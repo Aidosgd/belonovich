@@ -32,7 +32,7 @@
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-          <ul class="nav navbar-nav navbar-right scroll visible-xs-block pull-right">
+          <ul class="nav navbar-nav navbar-right scroll hidden-sm hidden-md hidden-lg mobile-menu pull-right">
             <li><a class="myWorks" href="#">My works</a></li>
             <li><a class="contactMe" href="#">Contact me</a></li>
           </ul>
@@ -261,13 +261,14 @@
         <div class="position">May be I can help you? </div>
         <div class="position" style="margin-bottom: 28px;">Don’t be afraid, just say «Hello!» </div>
         <p><span>Write me on</span>: <a href="mailto: gb.gayane@gmail.com">gb.gayane@gmail.com</a></p>
-        <p><span>Find me on</span>:
+        <p class="social-footer"><span class="hidden-xs">Find me on :</span>
           <a href="https://www.linkedin.com/in/gayane-belonovich/" target="_blank">Linkedin</a>
           <a href="https://medium.com/@gayanagaribyan" target="_blank">Medium</a>
           <a href="https://www.facebook.com/gayane.belonovich" target="_blank">Facebook</a>
           <a href="https://www.instagram.com/gayane_belonovich/" target="_blank">Instagram</a>
           <a href="https://dribbble.com/BelonovichGayane" target="_blank">Dribble</a>
-          <a href="https://www.behance.net/Gayane_G" target="_blank">Behance</a></p>
+          <a href="https://www.behance.net/Gayane_G" target="_blank">Behance</a>
+        </p>
       </div>
     </section>
   </div>
@@ -330,12 +331,12 @@
          var st = $(this).scrollTop();
          if (st > lastScrollTop){
            // down start
-           if(st >= $('.portfolio').offset().top - 100){
+           if(st >= $('.portfolio').offset().top - 200){
              $('.scroll li').removeClass('active');
              $('.myWorks').closest('li').addClass('active');
              $('.navbar').addClass('active');
            }
-           if(st >= $('.footer').offset().top - 100){
+           if(st >= $('.footer').offset().top - 200){
              $('.scroll li').removeClass('active');
              $('.contactMe').closest('li').addClass('active');
              $('.navbar').addClass('black');
@@ -344,11 +345,11 @@
          // down end
          } else {
            // up start
-           if(st <= $('.portfolio').offset().top - 100){
+           if(st <= $('.portfolio').offset().top - 200){
              $('.scroll li').removeClass('active');
              $('.navbar').removeClass('active');
            }
-           if(st >= $('.footer').offset().top - 100){
+           if(st >= $('.footer').offset().top - 200){
              $('.scroll li').removeClass('active');
              $('.myWorks').closest('li').addClass('active');
              $('.navbar').removeClass('black');
