@@ -2,7 +2,8 @@
   outline: none; }
 
 body, html {
-  height: 100%; }
+  height: 100%;
+  font-family: 'Lato', sans-serif; }
 
 header {
   position: fixed;
@@ -196,7 +197,11 @@ header {
         font-stretch: normal;
         line-height: 1.58;
         letter-spacing: -0px;
-        color: #a4a4a4; }
+        color: #a4a4a4;
+        margin-bottom: 8px;
+        margin-top: 30px; }
+        .main-content .portfolio .list .item .desc.first {
+          margin-top: 0; }
       .main-content .portfolio .list .item p {
         font-size: 16px;
         font-weight: normal;

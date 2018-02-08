@@ -8,6 +8,7 @@
 
   <link rel="shortcut icon" href="images/favicon.png">
   <!-- Latest compiled and minified CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
   <!-- Optional theme -->
@@ -62,12 +63,12 @@
   </header>
 
   <div class="bottom">
-    <a class="btn myWorks">
+    <a class="btn myWorks" style="z-index: 10000;">
       <img src="images/arrow-down.png" alt="">
       <div>My works</div>
     </a>
 
-    <a class="btn contactMe">
+    <a class="btn contactMe" style="z-index: 10000;">
       <img src="images/arrow-down-2.png" alt="">
       <div>Contact me</div>
     </a>
@@ -97,7 +98,7 @@
                   <a href="https://play.google.com/store/apps/details?id=chocolife.me&hl=ru" target="_blank" class="btn btn-link">Visit original <img src="images/arrow-down.png"></a>
                 </div>
                 <div class="col-md-5 hidden-xs">
-                  <div class="desc">Discription</div>
+                  <div class="desc first">Discription</div>
                   <p>Chocolife is the largest discount coupon service in Kazakhstan. They provide coupons for all types of goods and services.</p>
                   <div class="hidden-block">
                     <div class="desc">Process</div>
@@ -114,7 +115,7 @@
 
                 </div>
                 <div class="col-md-3 hidden-xs">
-                  <div class="desc">Objective</div>
+                  <div class="desc first">Objective</div>
                   <p>The objective was to make the first mobile app version (Android & iOS)  which has all functions of web site.</p>
                 </div>
                 <div class="col-md-1 col-xs-2">
@@ -124,10 +125,10 @@
                 </div>
 
                 <div style="margin-top: 40px;" class="col-xs-12 hidden-lg hidden-md hidden-sm hidden-block">
-                  <div class="desc">Objective</div>
+                  <div class="desc first">Objective</div>
                   <p>The objective was to make the first mobile app version (Android & iOS)  which has all functions of web site.</p>
 
-                  <div class="desc">Discription</div>
+                  <div class="desc first">Discription</div>
                   <p>Chocolife is the largest discount coupon service in Kazakhstan. They provide coupons for all types of goods and services.</p>
                   <div class="desc">Process</div>
                   <p>I worked on Chocolife with the project manager. At that time mobile apps were new in Kazakhstan market and there wasn’t such definition as UX design. Solutions were based on our own experience and colleagues’ survey and competitor analysis. We prepared a mind map of web site structure, made prototype, drew design and tested hypotheses among colleagues. Work was done in coordination within team and client.</p>
@@ -149,7 +150,7 @@
                   <a href="http://kase.kz/" target="_blank" class="btn btn-link">Visit original <img src="images/arrow-down.png"></a>
                 </div>
                 <div class="col-md-5 hidden-xs">
-                  <div class="desc">Discription</div>
+                  <div class="desc first">Discription</div>
                   <p>Website redesign of Kazakhstan Stock Exchange. </p>
                   <div class="hidden-block">
                     <div class="desc">Work process:</div>
@@ -164,7 +165,7 @@
                   </div>
                 </div>
                 <div class="col-md-3 hidden-xs">
-                  <div class="desc">Objectives:</div>
+                  <div class="desc first">Objectives:</div>
                   <p>The objective was to redesign the out-dated website taking into account the needs of each target audience, fully update the structure of the site and meet the technical capabilities of the company. </p>
                 </div>
                 <div class="col-md-1 col-xs-2">
@@ -174,7 +175,7 @@
                 </div>
 
                 <div style="margin-top: 40px;" class="col-xs-12 hidden-lg hidden-md hidden-sm hidden-block">
-                  <div class="desc">Objectives:</div>
+                  <div class="desc first">Objectives:</div>
                   <p>The objective was to redesign the out-dated website taking into account the needs of each target audience, fully update the structure of the site and meet the technical capabilities of the company. </p>
                   <div class="desc">Discription</div>
                   <p>Website redesign of Kazakhstan Stock Exchange. </p>
@@ -198,7 +199,7 @@
                   <a href="http://kompetenz.kz/individual/" target="_blank" class="btn btn-link">Visit original <img src="images/arrow-down.png"></a>
                 </div>
                 <div class="col-md-5 hidden-xs">
-                  <div class="desc">Discription</div>
+                  <div class="desc first">Discription</div>
                   <p>Redesign of an insurance company website, which has no special advantages over competitors, but the idea was to find out its competitive advantages.</p>
                   <div class="hidden-block">
                     <div class="desc">Work process:</div>
@@ -217,7 +218,7 @@
                   </div>
                 </div>
                 <div class="col-md-3 hidden-xs">
-                  <div class="desc">Objective</div>
+                  <div class="desc first">Objective</div>
                   <p>The main objective was to create modern redesign of their website and to change the structure of website. The visual solution also had to be different from competitors. One of the goals was to make sure users understood that website offers to purchase insurance policies.</p>
                   <p>In the beginning of a project an important task was to approve my design concept that would differ from the prototype.</p>
                 </div>
@@ -228,7 +229,7 @@
                 </div>
 
                 <div style="margin-top: 40px;" class="col-xs-12 hidden-lg hidden-md hidden-sm hidden-block">
-                  <div class="desc">Objective</div>
+                  <div class="desc first">Objective</div>
                   <p>The main objective was to create modern redesign of their website and to change the structure of website. The visual solution also had to be different from competitors. One of the goals was to make sure users understood that website offers to purchase insurance policies.</p>
                   <p>In the beginning of a project an important task was to approve my design concept that would differ from the prototype.</p>
                   <div class="desc">Discription</div>
@@ -297,7 +298,7 @@
         $('section').removeClass('active');
         $('.portfolio').addClass('active');
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-          $("html, body").stop().animate({ scrollTop: $('.portfolio').offset().top - 50}, {
+            $("html, body").stop().animate({ scrollTop: $('.portfolio').offset().top - 50}, {
                 duration: 'slow', // how slow we are animating
                 easing: 'easeInOutSine', // the type of easing
                 complete: function() { // the callback
@@ -359,8 +360,7 @@
              $('.myWorks').closest('li').addClass('active');
              $('.navbar').addClass('active');
            }
-           if(st >= $('.footer').offset().top - 200){
-             console.log('footer');
+           if(st >= $('.footer').offset().top - 500){
              $('.scroll li').removeClass('active');
              $('.contactMe').closest('li').addClass('active');
              $('.navbar').addClass('black');
@@ -373,7 +373,7 @@
              $('.scroll li').removeClass('active');
              $('.navbar').removeClass('active');
            }
-           if(st >= $('.footer').offset().top - 200){
+           if(st <= $('.footer').offset().top - 200){
              $('.scroll li').removeClass('active');
              $('.myWorks').closest('li').addClass('active');
              $('.navbar').removeClass('black');
@@ -400,7 +400,6 @@
              $('.navbar').addClass('active');
            }
            if(st >= $('.footer').offset().top - 200){
-             console.log('footer');
              $('.scroll li').removeClass('active');
              $('.contactMe').closest('li').addClass('active');
              $('.navbar').addClass('black');
@@ -428,6 +427,7 @@
       });
 
     }
+
     $('.portfolio .item').on('click', function(){
       var hiddenBlock = $(this).find('.hidden-block');
       $(this).toggleClass('active');
